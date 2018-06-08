@@ -3248,6 +3248,7 @@ arc_getseal(ARC_MESSAGE *msg, ARC_HDRFIELD **seal, char *authservid,
 			next = tmphdr->hdr_next;
 			ARC_FREE(tmphdr->hdr_text);
 			ARC_FREE(tmphdr);
+			tmphdr = next;
 		}
 
 		msg->arc_sealhead = NULL;
